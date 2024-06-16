@@ -81,16 +81,11 @@ void setup() {
   display.setTextWrap(true);
   x = display.width();
   minX = -12 * strlen(message);  // 12 = 6 pixels/character * text size 2
-  Serial.print("minX=");
-  Serial.println(minX);
   display.display();
 
   delay(1000);
   initTemp = dht.readTemperature();
   Humi = dht.readHumidity();
-  Serial.print("Initial Temp=");
-  Serial.println(initTemp);
-
 }
 
 void OLED_message(void) {
